@@ -5,7 +5,7 @@ public class LineLength {
         
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter the coordinates for the first line:");
+        System.out.println("Enter the coordinates 1st line:");
         System.out.print("Enter x1: ");
         double x1 = sc.nextDouble();
         System.out.print("Enter y1: ");
@@ -18,7 +18,7 @@ public class LineLength {
 
         double distance1 = calculateDistance(x1, y1, x2, y2);
 
-        System.out.println("Enter the coordinates for the second line:");
+        System.out.println("Enter the coordinates 2nd line:");
         System.out.print("Enter x3: ");
         double x3 = sc.nextDouble();
         System.out.print("Enter y3: ");
@@ -31,13 +31,16 @@ public class LineLength {
 
         double distance2 = calculateDistance(x3, y3, x4, y4);
 
-        System.out.println("The length of the first line is: " + distance1);
-        System.out.println("The length of the second line is: " + distance2);
+        System.out.println("First Line Length : " + distance1);
+        System.out.println("Second Line Length : " + distance2);
 
-        if (distance1 == distance2) {
-            System.out.println("Both lines are of equal length.");
+        int comparisonResult = Double.compare(distance1, distance2);
+        if (comparisonResult > 0) {
+            System.out.println("First Line is large");
+        } else if (comparisonResult < 0) {
+            System.out.println("First Line is short");
         } else {
-            System.out.println("The lines are of different lengths.");
+            System.out.println("Equal length");
         }
 
         sc.close();
