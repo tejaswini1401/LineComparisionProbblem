@@ -1,5 +1,12 @@
+import java.util.Scanner;
+
 class Program{
     public static void main(String[] args) {
-        System.out.println("Heyy");
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Heyy");
+
+        sc.close();
+       
     }
 }
